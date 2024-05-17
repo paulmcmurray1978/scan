@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barcode Detector</title>
+  <link rel="stylesheet" type="text/css" href="scanner.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/barcode-detection@0.4.0/dist/barcode-detector.umd.js"></script>
+  <script src="https://unpkg.com/eruda@2.4.1/eruda.js"></script>
+  <script>eruda.init();</script>
+</head>
+<body>
+  <div class="home">
+    <div id="status">Initializing...</div>
+    <button id="startButton">Start Scan</button>
+    Detect an Image: <input id="fileInput" type="file"/>
+    <img id="selectedImg"/>
+  </div>
+  <div id="theScanner" class="scanner" style="display:none;">
+    <select id="cameraSelect"></select>
+    <button id="closeButton">Close</button>
+    <svg class="overlay fullscreen"></svg>
+    <video class="camera fullscreen" muted autoplay="autoplay" playsinline="playsinline" webkit-playsinline></video>
+  </div>
+  <div id="text"></div>
+  <div id="barcodeValue"></div>
+  <script src="scanner.js"></script>
+  <script>
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<script>
+    fetch("https://q0ev9yiw2b.execute-api.eu-west-1.amazonaws.com/dev/v0/dg/postcode/" +
+      "ne303tb" +
+      "/foodbanks", { mode: "no-cors" })
+  .then(response => response.text())
+  .then(data => console.log(data));
+</script>
